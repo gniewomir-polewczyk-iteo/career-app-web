@@ -7,7 +7,7 @@ interface Props {
 
 const MenuItem = ({ post }: Props) => {
   return (
-    <div>
+    <div className="">
       <Link
         as={`/posts/${post.slug}`}
         href="/posts/[slug]"

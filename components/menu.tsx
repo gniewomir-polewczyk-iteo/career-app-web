@@ -16,7 +16,7 @@ const Menu = ({ posts }: Props) => {
   const categoriesList = generateCategoriesList(posts);
 
   return (
-    <div>
+    <div className="">
       {categoriesList.map((category) => (
         <div key={category}>
           <h3>{category}:</h3>

@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import Container from "../../components/container";
-import Header from "../../components/header";
 import Layout from "../../components/layout";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostBody from "../../components/post-body";
@@ -12,28 +10,28 @@ import PostHeader from "../../components/post-header";
 import type PostType from "../../interfaces/post";
 
 type Props = {
+  allPosts: PostType[];
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ allPosts, post, preview }: Props) {
   const router = useRouter();
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
-    <Layout preview={preview}>
+    <Layout preview={preview} posts={allPosts}>
       <Container>
-        <Header />
         {router.isFallback ? (
           <h1>Loading…</h1>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="">
               <Head>
-                <title>{title}</title>
+                <title>{post.title}</title>
               </Head>
               <PostHeader title={post.title} />
               <PostBody content={post.content} />
@@ -52,6 +50,17 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
+  const allPosts = getAllPosts([
+    "author",
+    "category",
+    "content",
+    "coverImage",
+    "date",
+    "excerpt",
+    "slug",
+    "title",
+  ]);
+
   const post = getPostBySlug(params.slug, [
     "author",
     "category",
@@ -62,10 +71,12 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "title",
   ]);
+
   const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
+      allPosts,
       post: {
         ...post,
         content,
