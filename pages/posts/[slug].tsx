@@ -1,15 +1,14 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
+import { getPostBySlug, getAllPosts } from "../../lib/api";
+import Container from "../../components/container";
+import Header from "../../components/header";
+import Layout from "../../components/layout";
 import markdownToHtml from "../../lib/markdownToHtml";
+import PostBody from "../../components/post-body";
+import PostHeader from "../../components/post-header";
 import type PostType from "../../interfaces/post";
 
 type Props = {
@@ -29,19 +28,14 @@ export default function Post({ post, morePosts, preview }: Props) {
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <h1>Loading…</h1>
         ) : (
           <>
             <article className="mb-32">
               <Head>
                 <title>{title}</title>
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
+              <PostHeader title={post.title} />
               <PostBody content={post.content} />
             </article>
           </>
