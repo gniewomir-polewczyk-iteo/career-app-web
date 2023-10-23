@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container from "../components/container";
 import Layout from "../components/layout";
-import MoreStories from "../components/more-stories";
+import Menu from "../components/menu";
 import Post from "../interfaces/post";
 import { getAllPosts } from "../lib/api";
 
@@ -17,7 +17,7 @@ export default function Index({ allPosts }: Props) {
           <title>Iteo career app</title>
         </Head>
         <Container>
-          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
+          {allPosts.length > 0 && <Menu posts={allPosts} />}
         </Container>
       </Layout>
     </>
