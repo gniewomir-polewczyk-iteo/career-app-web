@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Stack, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -11,9 +11,18 @@ type Props = {
 const DrawerSection: React.FC<Props> = (props) => {
   const { title, children } = props;
   const [expanded, setExpanded] = useState(false);
+
   const handleToggle = () => {
+    localStorage.setItem(title, `${!expanded}`);
     setExpanded(!expanded);
   };
+
+  useEffect(() => {
+    if (localStorage.getItem(title) === "true") {
+      setExpanded(true);
+    }
+  }, [expanded]);
+
   return (
     <Stack direction="column">
       <Stack
