@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Link, Stack} from '@mui/material';
-import {Logo} from "../../logo";
+import {Logo} from "./logo";
 
 export const NavLogo: FC = () => {
     return (
