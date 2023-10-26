@@ -1,8 +1,8 @@
-import { Stack } from "@mui/system";
+import { Grid, Stack } from "@mui/material";
+import { FlowRoadmap } from "./modules/flow-roadmap/flow-roadmap";
 import Drawer from "./drawer/drawer";
 import Meta from "./meta";
 import PostType from "../interfaces/post";
-import { FlowRoadmap } from "./modules/flow-roadmap/flow-roadmap";
 
 type Props = {
   children: React.ReactNode;
@@ -14,20 +14,17 @@ const Layout = ({ children, posts }: Props) => {
   return (
     <Stack direction={"row"} minHeight={"100vh"} position={"relative"}>
       <Meta />
-      <Drawer posts={posts} />
-      <Stack
-        direction="column"
-        sx={{
-          p: 4,
-          height: "100vh",
-          width: `calc(100% - 280px)`,
-          transform: `translateX(280px)`,
-          transition: "all 300ms",
-        }}
-      >
-        <FlowRoadmap posts={posts} />
-        <main>{children}</main>
-      </Stack>
+      <Grid container>
+        <Grid item xs={2}>
+          <Drawer posts={posts} />
+        </Grid>
+        <Grid item xs={7}>
+          <FlowRoadmap posts={posts} />
+        </Grid>
+        <Grid item xs={3}>
+          <main>{children}</main>
+        </Grid>
+      </Grid>
     </Stack>
   );
 };

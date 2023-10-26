@@ -20,82 +20,73 @@ const Drawer = ({ posts }: Props) => {
   return (
     <Box
       sx={{
-        width: "280px",
-        transition: "transform 300ms",
-        position: "fixed",
-        zIndex: 100,
+        height: "100vh",
+        width: "100%",
+        top: 0,
+        backgroundColor: "#232328",
+        boxShadow: 0,
+        zIndex: 155,
+        borderRadius: 0,
+        overflowY: "auto",
+        overflowX: "hidden",
+        transition: "all 0.3s ease",
+        "&::-webkit-scrollbar": {
+          width: "0.4em",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          backgroundColor: "rgba(0,0,0,.1)",
+          outline: "1px solid slategrey",
+        },
       }}
     >
-      <Box
+      <Stack
+        height="64px"
+        alignItems="center"
+        direction="row"
+        justifyContent="center"
+        px={2}
+        spacing={1}
         sx={{
-          height: "100vh",
-          width: "100%",
-          top: 0,
-          backgroundColor: "#232328",
-          boxShadow: 0,
-          zIndex: 155,
-          borderRadius: 0,
-          overflowY: "auto",
-          overflowX: "hidden",
-          transition: "all 0.3s ease",
-          "&::-webkit-scrollbar": {
-            width: "0.4em",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "rgba(0,0,0,.1)",
-            outline: "1px solid slategrey",
-          },
+          borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
         }}
       >
-        <Stack
-          height="64px"
-          alignItems="center"
-          direction="row"
-          justifyContent="center"
-          px={2}
-          spacing={1}
+        <NavLogo />
+        <Typography
+          variant="h6"
           sx={{
-            borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+            fontWeight: "bold",
+            color: "primary.contrastText",
+            pt: 0.3,
+            textTransform: "uppercase",
+            mr: "inherit",
           }}
         >
-          <NavLogo />
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: "bold",
-              color: "primary.contrastText",
-              pt: 0.3,
-              textTransform: "uppercase",
-              mr: "inherit",
-            }}
-          >
-            iteo
-          </Typography>
-        </Stack>
-        <Stack
-          width="100%"
-          justifyContent="center"
-          flexDirection="column"
-          spacing="4px"
-          sx={{
-            pb: 1,
-          }}
-        >
-          {categoriesList?.map((category) => (
-            <DrawerSection title={category} key={category}>
-              {posts
-                .filter((post) => post.category === category)
-                .map((post) => (
-                  <DrawerItem
-                    key={post.title}
-                    label={post.title}
-                    path={post.slug}
-                  />
-                ))}
-            </DrawerSection>
-          ))}
-        </Stack>
-      </Box>
+          iteo
+        </Typography>
+      </Stack>
+      <Stack
+        width="100%"
+        justifyContent="center"
+        flexDirection="column"
+        spacing="4px"
+        sx={{
+          pb: 1,
+        }}
+      >
+        {categoriesList?.map((category) => (
+          <DrawerSection title={category} key={category}>
+            {posts
+              .filter((post) => post.category === category)
+              .map((post) => (
+                <DrawerItem
+                  key={post.title}
+                  label={post.title}
+                  path={post.slug}
+                />
+              ))}
+          </DrawerSection>
+        ))}
+      </Stack>
     </Box>
   );
 };
