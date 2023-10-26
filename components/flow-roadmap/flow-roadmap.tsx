@@ -1,9 +1,8 @@
 import ReactFlow, { BezierEdge, Controls } from "reactflow";
 import { CustomNode } from "./components/custom-node";
-import { Roadmap } from "../../types";
+import { PostType, Roadmap } from "../../types";
 import { useFlowData } from "./hooks/use-positioned-roadmap";
 import { useNodeContext } from "./providers/node-context-provider";
-import PostType from "../../interfaces/post";
 
 import "reactflow/dist/base.css";
 
@@ -38,7 +37,6 @@ export const FlowRoadmap = ({ posts }: Props) => {
   };
 
   const positionedRoadmap = useFlowData(findRoadMap?.roadMap || initialRoadmap);
-  const { nodeItem } = useNodeContext();
 
   return (
     <>
@@ -58,18 +56,6 @@ export const FlowRoadmap = ({ posts }: Props) => {
       >
         <Controls />
       </ReactFlow>
-      {/* <Modal
-        isOpen={nodeItem.value.name !== ""}
-        onClose={() =>
-          nodeItem.set({
-            description: "",
-            name: "",
-            links: [],
-            emoji: "",
-          })
-        }
-        content={<ModalContent />}
-      /> */}
     </>
   );
 };

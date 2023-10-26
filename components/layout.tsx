@@ -1,8 +1,8 @@
-import { Grid, Stack } from "@mui/material";
 import { FlowRoadmap } from "./flow-roadmap/flow-roadmap";
+import { Grid, Stack } from "@mui/material";
+import { PostType } from "../types";
 import Drawer from "./drawer/drawer";
 import Meta from "./meta";
-import PostType from "../interfaces/post";
 
 type Props = {
   children: React.ReactNode;

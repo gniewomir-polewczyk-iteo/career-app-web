@@ -1,10 +1,6 @@
-import { FC } from "react";
-import { Handle, Position } from "reactflow";
-import Avatar from "@mui/material/Avatar";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import { Avatar, Paper, Stack, Typography } from "@mui/material";
 import { FlowData } from "../../../types";
+import { Handle, Position } from "reactflow";
 import { useNodeContext } from "../providers/node-context-provider";
 import Link from "next/link";
 
@@ -12,9 +8,7 @@ type Props = {
   data: FlowData;
 };
 
-export const CustomNode: FC<Props> = ({ data }) => {
-  console.log(data);
-
+export const CustomNode = ({ data }: Props) => {
   const { nodeItem } = useNodeContext();
   return (
     <Paper

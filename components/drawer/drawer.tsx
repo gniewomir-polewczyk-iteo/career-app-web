@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { NavLogo } from "./components/nav-logo";
+import { PostType } from "../../types";
 import DrawerItem from "./components/drawer-item";
 import DrawerSection from "./components/drawer-section";
-import PostType from "../../interfaces/post";
 
 interface Props {
   posts: PostType[];

@@ -1,13 +1,13 @@
+import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { PostType } from "../../types";
 import { useRouter } from "next/router";
+import Container from "../../components/container";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import Container from "../../components/container";
 import Layout from "../../components/layout";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import type PostType from "../../interfaces/post";
 
 type Props = {
   allPosts: PostType[];

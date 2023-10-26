@@ -1,10 +1,10 @@
+import { getAllPosts } from "../lib/api";
+import { PostType } from "../types";
 import Head from "next/head";
 import Layout from "../components/layout";
-import Post from "../interfaces/post";
-import { getAllPosts } from "../lib/api";
 
 type Props = {
-  allPosts: Post[];
+  allPosts: PostType[];
 };
 
 export default function Index({ allPosts }: Props) {

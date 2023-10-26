@@ -20,14 +20,27 @@ export type FlowData = {
   description: string;
   emoji?: string;
 };
+
 export type FlowNode = {
   id: string;
   type: string;
   data: FlowData;
 };
+
 export type FlowNodeWithPosition = FlowNode & {
   position: {
     x: number;
     y: number;
   };
+};
+
+export type PostType = {
+  author: string;
+  category: string;
+  content: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  slug: string;
+  title: string;
 };

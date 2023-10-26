@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { List, ListItem, Stack, Typography } from "@mui/material";
-import { useNodeContext } from "../providers/node-context-provider.jsx";
+import { useNodeContext } from "../providers/node-context-provider";
 
-export const ModalContent: FC = () => {
+export const ModalContent = () => {
   const { nodeItem } = useNodeContext();
   const node = nodeItem.value;
 

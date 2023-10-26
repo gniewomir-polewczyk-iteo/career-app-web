@@ -1,4 +1,4 @@
-import React, { FC, createContext, useContext } from "react";
+import { createContext, useContext } from "react";
 import { FlowData } from "../../../types";
 import { SetValueType, useSetValue } from "../hooks/use-value-set";
 
@@ -29,7 +29,7 @@ export const useNodeContext = () => {
   return useContext(NodeContext);
 };
 
-export const NodeContextProvider: FC<Props> = ({ children }) => {
+export const NodeContextProvider = ({ children }: Props) => {
   const nodeItem = useSetValue(initialData.nodeItem.value);
 
   return (
