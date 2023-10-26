@@ -59,6 +59,8 @@ export async function getStaticProps({ params }: Params) {
     "excerpt",
     "slug",
     "title",
+    "id",
+    "parentIds",
   ]);
 
   const post = getPostBySlug(params.slug, [
@@ -70,6 +72,8 @@ export async function getStaticProps({ params }: Params) {
     "excerpt",
     "slug",
     "title",
+    "id",
+    "parentIds",
   ]);
 
   const content = await markdownToHtml(post.content || "");
