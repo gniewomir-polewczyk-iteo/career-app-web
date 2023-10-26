@@ -1,5 +1,5 @@
 import { Grid, Stack } from "@mui/material";
-import { FlowRoadmap } from "./modules/flow-roadmap/flow-roadmap";
+import { FlowRoadmap } from "./flow-roadmap/flow-roadmap";
 import Drawer from "./drawer/drawer";
 import Meta from "./meta";
 import PostType from "../interfaces/post";

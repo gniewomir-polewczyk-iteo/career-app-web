@@ -5,7 +5,7 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FlowData } from "../../../types";
-import { useNodeContext } from "../providers/node-context-provider.tsx";
+import { useNodeContext } from "../providers/node-context-provider";
 import Link from "next/link";
 
 type Props = {

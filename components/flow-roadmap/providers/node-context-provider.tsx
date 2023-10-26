@@ -1,6 +1,6 @@
-import React, { FC, createContext, useContext } from 'react';
-import { FlowData } from '../../../types';
-import { SetValueType, useSetValue } from '../hooks/use-value-set.hook';
+import React, { FC, createContext, useContext } from "react";
+import { FlowData } from "../../../types";
+import { SetValueType, useSetValue } from "../hooks/use-value-set";
 
 type LayoutContextType = {
   nodeItem: SetValueType<FlowData>;
@@ -10,11 +10,11 @@ const initialData: LayoutContextType = {
   nodeItem: {
     set: () => null,
     value: {
-      description: '',
-      longDescription: '',
-      name: '',
+      description: "",
+      longDescription: "",
+      name: "",
       links: [],
-      emoji: '',
+      emoji: "",
     },
   },
 };

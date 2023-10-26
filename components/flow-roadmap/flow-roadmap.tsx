@@ -1,14 +1,11 @@
 import ReactFlow, { BezierEdge, Controls } from "reactflow";
-import "reactflow/dist/base.css";
-import { responseData } from "../../../data";
-import { Roadmap } from "../../../types";
-import { Modal } from "../../../components/modal";
 import { CustomNode } from "./components/custom-node";
-import { ModalContent } from "./components/modal-content";
-import { useFlowData } from "./hooks/usePositionedRoadmap";
+import { Roadmap } from "../../types";
+import { useFlowData } from "./hooks/use-positioned-roadmap";
 import { useNodeContext } from "./providers/node-context-provider";
-import { getAllPosts } from "../../../lib/api";
-import PostType from "../../../interfaces/post";
+import PostType from "../../interfaces/post";
+
+import "reactflow/dist/base.css";
 
 const nodeTypes = {
   custom: CustomNode,
@@ -35,10 +32,6 @@ export const FlowRoadmap = ({ posts }: Props) => {
     mapName: "developer",
   };
 
-  // const findRoadMap = responseData.find(
-  //   (roadmap) => roadmap.roadMapName === params.mapName
-  // );
-
   const findRoadMap = {
     roadMapName: "developer",
     roadMap: posts,
@@ -46,11 +39,6 @@ export const FlowRoadmap = ({ posts }: Props) => {
 
   const positionedRoadmap = useFlowData(findRoadMap?.roadMap || initialRoadmap);
   const { nodeItem } = useNodeContext();
-
-  console.log(positionedRoadmap);
-
-  // console.log(positionedRoadmap);
-  // console.log(posts);
 
   return (
     <>
