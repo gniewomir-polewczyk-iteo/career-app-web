@@ -43,4 +43,6 @@ export type PostType = {
   excerpt: string;
   slug: string;
   title: string;
+  id: string;
+  parentIds: string[];
 };

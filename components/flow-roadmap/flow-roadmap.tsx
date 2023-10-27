@@ -1,8 +1,7 @@
-import ReactFlow, { BezierEdge, Controls } from "reactflow";
 import { CustomNode } from "./components/custom-node";
-import { PostType, Roadmap } from "../../types";
+import { PostType } from "../../types";
 import { useFlowData } from "./hooks/use-positioned-roadmap";
-import { useNodeContext } from "./providers/node-context-provider";
+import ReactFlow, { BezierEdge, Controls } from "reactflow";
 
 import "reactflow/dist/base.css";
 
@@ -15,28 +14,7 @@ type Props = {
 };
 
 export const FlowRoadmap = ({ posts }: Props) => {
-  const initialRoadmap: Roadmap[] = [
-    {
-      id: "1",
-      name: "BRAK DANYCH",
-      description: "SKONTAKTUJ SIE Z ADMINSITRATOREM APLIKACJI",
-      emoji: "🚀",
-      links: [],
-      longDescription: "",
-      parentIds: [],
-    },
-  ];
-
-  const params = {
-    mapName: "developer",
-  };
-
-  const findRoadMap = {
-    roadMapName: "developer",
-    roadMap: posts,
-  };
-
-  const positionedRoadmap = useFlowData(findRoadMap?.roadMap || initialRoadmap);
+  const positionedRoadmap = useFlowData(posts);
 
   return (
     <>

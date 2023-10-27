@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import { PostType } from "../../types";
 import { useRouter } from "next/router";
@@ -25,19 +26,21 @@ export default function Post({ allPosts, post, preview }: Props) {
   return (
     <Layout preview={preview} posts={allPosts}>
       <Container>
-        {router.isFallback ? (
-          <h1>Loading…</h1>
-        ) : (
-          <>
-            <article className="">
-              <Head>
-                <title>{post.title}</title>
-              </Head>
-              <PostHeader title={post.title} />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
+        <Box sx={{ p: 4 }}>
+          {router.isFallback ? (
+            <h1>Loading…</h1>
+          ) : (
+            <>
+              <article className="">
+                <Head>
+                  <title>{post.title}</title>
+                </Head>
+                <PostHeader title={post.title} />
+                <PostBody content={post.content} />
+              </article>
+            </>
+          )}
+        </Box>
       </Container>
     </Layout>
   );

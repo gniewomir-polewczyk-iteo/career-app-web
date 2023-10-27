@@ -1,10 +1,10 @@
+import { FlowNodeWithPosition, PostType, Roadmap } from "../../../types";
 import { useEffect, useState } from "react";
-import { FlowNodeWithPosition, Roadmap } from "../../../types";
 
 const HORIZONTAL_SPACING = 500;
 const VERTICAL_SPACING = 200;
 
-export const useFlowData = (roadmaps: Roadmap[]) => {
+export const useFlowData = (roadmaps: PostType[]) => {
   const [nodes, setNodes] = useState<FlowNodeWithPosition[]>([]);
   const [edges, setEdges] = useState<
     { id: string; source: string; target: string }[]
@@ -53,11 +53,6 @@ export const useFlowData = (roadmaps: Roadmap[]) => {
       id: r.id,
       type: "custom",
       data: {
-        longDescription: r.longDescription,
-        name: r.name,
-        links: r.links,
-        description: r.description,
-        emoji: r.emoji,
         title: r.title,
         excerpt: r.excerpt,
         slug: r.slug,
