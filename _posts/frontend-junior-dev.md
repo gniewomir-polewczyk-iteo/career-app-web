@@ -7,10 +7,60 @@ date: "2020-03-16T05:35:07.322Z"
 author: Iteo
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+# 🙈 Junior Frontend Developer 
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+As a Junior React Developer, you will play a vital role in our development team, assisting in the creation and maintenance of web applications using React. You will collaborate closely with senior developers and designers to bring innovative, user-friendly, and responsive web solutions to life. This entry-level position is an excellent opportunity to kickstart your career in web development and gain hands-on experience in a dynamic and supportive environment.
 
-## Lorem Ipsum
+## Key Responsibilities:
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+- Front-End Development: Develop and maintain web applications using React, ensuring they are highly responsive and user-friendly.
+
+- UI/UX Implementation: Collaborate with designers to translate UI/UX designs into functional web interfaces.
+
+- Bug Fixes: Identify and resolve bugs and issues in existing applications, ensuring a smooth user experience.
+
+- Testing: Conduct thorough testing and quality assurance to ensure the applications are robust and error-free.
+
+- Code Reviews: Participate in code reviews with senior developers to maintain code quality and best practices.
+
+- Collaboration: Work closely with the development team and actively participate in project planning and discussions.
+
+- Learning and Growth: Stay updated with the latest web development trends, technologies, and best practices to improve your skills continuously.
+
+## Requirements:
+
+### Education:
+
+A bachelor's degree in Computer Science, Software Engineering, or a related field is preferred but not mandatory. Relevant coursework, bootcamps, or self-taught developers with a strong portfolio are also considered.
+
+### Technical Skills:
+
+Proficiency in JavaScript and ES6+ syntax.
+Strong understanding of React and its ecosystem.
+Familiarity with state management libraries such as Redux or MobX is a plus.
+Knowledge of HTML, CSS, and responsive design principles.
+Experience with front-end build tools like Webpack or Babel.
+Basic knowledge of version control systems, preferably Git.
+
+### Soft Skills:
+
+Strong problem-solving skills and a logical mindset.
+Good communication and teamwork skills.
+Attention to detail and a commitment to writing clean, maintainable code.
+Eagerness to learn and adapt to new technologies and methodologies.
+Ability to work in a fast-paced and collaborative environment.
+
+### Additional Skills (Preferred, but not mandatory):
+
+Experience with testing frameworks like Jest or Enzyme.
+Knowledge of web accessibility standards (WCAG).
+Basic understanding of back-end technologies and RESTful APIs.
+Experience with responsive and mobile-first design.
+Familiarity with UI/UX design principles.
+
+### Personal Qualities:
+
+Passion for web development and a desire to build user-friendly, efficient applications.
+A strong desire to grow and develop as a developer, both professionally and technically.
+An ability to work independently as well as part of a team.
+This Junior React Developer role is an excellent opportunity to launch your career in web development, offering the chance to work on exciting projects, learn from experienced developers, and contribute to the creation of innovative web applications. As a junior developer, you will be supported in your growth and development within the company.
